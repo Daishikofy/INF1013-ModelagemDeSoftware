@@ -1,12 +1,11 @@
 ﻿using System;
 
-namespace inf1013_Modelagem
+
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
+        Console.WriteLine("Hello World!");
     }
 }
+

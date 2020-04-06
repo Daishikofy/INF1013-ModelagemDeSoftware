@@ -10,12 +10,17 @@ public class Player
 
     FoodInventory foodInventory;
     Animal animal;
+    AnimalsLog animalsLog;
 
     public void AskToSleep()
     {
         if(animal.Sleep())
         {
-            //Implement recuperation
+            Console.WriteLine(animal.identity.name + "is going to sleep");
+        }
+        else 
+        {
+            Console.WriteLine(animal.identity.name + "doesn't want to sleep");
         }
     }
 
@@ -44,11 +49,15 @@ public class Player
 
     public void CreateNewAnimal()
     {
-
+        AnimalType type = new AnimalType("RandomSpecie");
+        AnimalId newId = new AnimalId("Random Name", type);
+        Animal newAnimal = new Animal(newId);
+        animal = newAnimal;
     }
 
     public void AnimalPassedOut()
     {
-
+        animalsLog.AddAnimal(animal);
+        CreateNewAnimal();
     }
 }

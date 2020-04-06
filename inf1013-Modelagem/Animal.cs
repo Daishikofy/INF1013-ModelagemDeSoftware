@@ -13,6 +13,19 @@ class Animal
 
     public bool isSleeping { get; private set; }
 
+    public Animal (AnimalId id)
+    {
+        identity = id;
+    }
+    public Animal(AnimalId id, int life, int energy, int happiness, bool sleep)
+    {
+        identity = id;
+        lifePoints = life;
+        energyPoints = energy;
+        happinessPoints = happiness;
+        isSleeping = sleep;
+    }
+
     public bool Eat(Food food, int quantity)
     {
         if (!WantsToEat(food)) return false;

@@ -4,6 +4,11 @@ using System.Text;
 
 class AnimalType
 {
-    public string specieName { get; }
+    //Where do we store all the possible types of animals
+    public string specieName;
+    public AnimalType (string name)
+    {
+        specieName = name;
+    }
 }
 
